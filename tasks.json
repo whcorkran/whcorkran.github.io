@@ -3,13 +3,9 @@
   "tasks": [
     {
       "label": "serve",
-      "type": "shell",
-      "command": "npx",
-      "args": ["http-server", "-p", "8000"],
+      "type": "npm",
+      "script": "serve",
       "isBackground": true,
-      "presentation": {
-        "reveal": "always"
-      },
       "problemMatcher": []
     }
   ]

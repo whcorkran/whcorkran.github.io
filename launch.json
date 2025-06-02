@@ -2,8 +2,8 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Launch Chrome against localhost",
-      "type": "pwa-chrome",
+      "name": "Launch Firefox against localhost",
+      "type": "pwa-firefox",
       "request": "launch",
       "url": "http://localhost:8000",
       "webRoot": "${workspaceFolder}",
