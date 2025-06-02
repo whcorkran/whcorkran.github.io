@@ -1,4 +1,13 @@
 {
-"runtimeExecutable" : "npx",
-"runtimeArgs": ["http-server", "-p", "8000"]
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Launch Chrome against localhost",
+      "type": "pwa-chrome",
+      "request": "launch",
+      "url": "http://localhost:8000",
+      "webRoot": "${workspaceFolder}",
+      "preLaunchTask": "serve"
+    }
+  ]
 }
