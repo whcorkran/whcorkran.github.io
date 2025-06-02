@@ -1,4 +1,4 @@
-/* Custom styles to complement Tailwind CSS */
+/* Tailwind */
 
 /* Smooth scrolling */
 html {
@@ -44,8 +44,7 @@ a:focus, button:focus {
   background-color: #4f46e5;
   color: white;
 }
-
-/* Optional: Add a subtle gradient to the background */
+/* Gradient */
 body {
   background: linear-gradient(to bottom right, #111827, #1f2937);
 }
