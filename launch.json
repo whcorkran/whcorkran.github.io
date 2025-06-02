@@ -1,0 +1,4 @@
+{
+"runtimeExecutable" : "npx",
+"runtimeArgs": ["http-server", "-p", "8000"]
+}
