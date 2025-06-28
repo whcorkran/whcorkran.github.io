@@ -3,20 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website</title>
+    <title>{{title}}</title>
 
     <link rel="stylesheet" href="{{'/css/style.css' | url}}">
+    <link rel="icon" href="{{ '/favicon.svg' | url}}"">
 
-    <!-- Optional: Favicon -->
-    <link rel="icon" href="favicon.ico">
 </head>
+
+<header>
+    <!-- header navigation scaffold with links to
+        - Projects page (projects.html)
+        - CV page (resume.html)
+        And icons that link to 
+        - GitHub
+        - LinkedIn
+    -->
+</header>
+
 <body>
-
-    <h1>Hello, World!</h1>
-    <p>Welcome to my website.</p>
-
-    <!-- Optional: Link to a JS file -->
-    <script src="script.js" defer></script>
-
+{{content | safe}}
 </body>
+
+<footer>
+    <!-- footer content -->
+</footer>
 </html>
