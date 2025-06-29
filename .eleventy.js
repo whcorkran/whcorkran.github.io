@@ -6,7 +6,7 @@ export default async function (eleventyConfig) {
     return {
         dir: {
             input: "src",
-            output: "docs"
+            output: "../whcorkran.github.io/docs"
         },
         templateFormats: ['md', 'njk', 'html'],
         markdownTemplateEngine: 'njk',
