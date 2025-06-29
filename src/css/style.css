@@ -6,14 +6,14 @@
 }
 
 :root {
-    --bg-primary: linear-gradient(135deg, #87CEEB 0%, #4682B4 100%);
-    --bg-secondary: #B0E0E6;
-    --text-primary: #ffffff;
-    --text-secondary: #f0f8ff;
-    --accent: #00d4ff;
-    --accent-hover: #00b8e6;
-    --border: #ffffff;
-    --shadow: rgba(0, 0, 0, 0.2);
+    --bg-primary: linear-gradient(135deg, #F5F5DC 0%, #DEB887 100%);
+    --bg-secondary: #F0E68C;
+    --text-primary: #8B4513;
+    --text-secondary: #A0522D;
+    --accent: #CD853F;
+    --accent-hover: #D2691E;
+    --border: #D2B48C;
+    --shadow: rgba(0, 0, 0, 0.1);
 }
 
 body {
@@ -28,8 +28,8 @@ body {
 
 /* Header and Navigation */
 .header {
-    background: var(--bg-primary);
-    border-bottom: 1px solid var(--border);
+    background: transparent;
+    border-bottom: none;
     position: sticky;
     top: 0;
     z-index: 100;
@@ -211,6 +211,7 @@ a:hover {
     margin-bottom: 2rem;
     pointer-events: none;
     user-select: none;
+    margin-left: 0px;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -220,6 +221,7 @@ a:hover {
     -moz-user-drag: none;
     -o-user-drag: none;
     user-drag: none;
+
 }
 
 /* Hero section */
