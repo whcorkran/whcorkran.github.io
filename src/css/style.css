@@ -39,29 +39,47 @@ body {
 .header-content {
     max-width: 1200px;
     margin: 0 auto;
-    text-align: center;
     padding: 0 2rem;
+}
+
+.header-row {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.home-header-row {
+    justify-content: center;
 }
 
 .header-name {
     font-size: 2.4rem;
     font-weight: normal;
     color: var(--text-primary);
-    margin-bottom: 0.5rem;
+    margin-bottom: 0;
     font-family: 'Noto Bold 700', serif;
     letter-spacing: 0.1em;
 }
 
+.header-name-link {
+    color: var(--text-primary);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.header-name-link:hover {
+    color: var(--accent-hover);
+}
+
 .header-line {
-    width: 100%;
+    width: 280px;
     height: 1px;
-    background-color: var(--text-primary);
-    margin: 0 auto 1rem auto;
+    background-color: var(--text-secondary);
+    margin: 0.5rem 0 1rem 0;
 }
 
 .nav {
     display: flex;
-    justify-content: center;
 }
 
 .nav-links {
@@ -78,7 +96,7 @@ body {
     font-weight: normal;
     font-size: 1.2rem;
     transition: color 0.3s ease;
-    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Noto', serif;
 }
 
 .nav-links a:hover {
@@ -95,7 +113,12 @@ body {
 }
 
 /* Typography */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     margin-bottom: 1rem;
     font-weight: 600;
     line-height: 1.2;
@@ -157,7 +180,6 @@ a:hover {
     -khtml-user-drag: none;
     -moz-user-drag: none;
     -o-user-drag: none;
-    user-drag: none;
 
 }
 
@@ -167,12 +189,20 @@ a:hover {
     margin-top: 0;
 }
 
+.home-nav-links {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+}
+
 /* Social links */
 .social-links {
     display: flex;
     justify-content: center;
     gap: 1.5rem;
-    margin-top: 1.5rem;
+    margin-top: 0.8rem;
 }
 
 .social-link {
