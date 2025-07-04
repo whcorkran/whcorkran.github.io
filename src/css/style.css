@@ -266,48 +266,6 @@ a:hover {
     height: 24px;
 }
 
-/* About page styling */
-.about-container {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    min-height: 60vh;
-    padding: 2rem;
-}
-
-.about-content {
-    max-width: 800px;
-    width: 100%;
-    padding: 3rem;
-    text-align: center;
-}
-
-.about-title {
-    font-size: 2.5rem;
-    color: var(--text-primary);
-    margin-bottom: 2rem;
-    font-family: 'Noto', serif;
-    font-weight: bold;
-    letter-spacing: 0.05em;
-}
-
-.about-text {
-    text-align: left;
-    line-height: 1.8;
-}
-
-.about-text p {
-    font-size: 1.1rem;
-    color: var(--text-secondary);
-    margin-bottom: 1.5rem;
-    text-align: justify;
-    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
-}
-
-.about-text p:last-child {
-    margin-bottom: 0;
-}
-
 /* About content overlay for home page animation */
 .about-overlay {
     position: fixed;
@@ -339,17 +297,17 @@ a:hover {
 }
 
 .about-overlay-title {
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: var(--text-primary);
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     font-family: 'Noto', serif;
-    font-weight: bold;
+    font-weight: lighter;
     letter-spacing: 0.05em;
     text-align: left;
 }
 
 .about-overlay-text {
-    line-height: 1.8;
+    line-height: 1.4;
 }
 
 .about-overlay-text p {
@@ -357,7 +315,8 @@ a:hover {
     color: var(--text-secondary);
     margin-bottom: 1.5rem;
     text-align: justify;
-    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+    font-family: 'Source Code Pro', monospace;
+    letter-spacing: 0.01em;
 }
 
 .about-overlay-text p:last-child {
