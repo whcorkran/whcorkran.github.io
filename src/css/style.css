@@ -180,7 +180,7 @@ a:hover {
 }
 
 .home-header-container.slide-left {
-    transform: translateX(-50%);
+    transform: translateX(-25%);
 }
 
 .home-header-image {
