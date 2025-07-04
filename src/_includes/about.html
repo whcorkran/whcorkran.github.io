@@ -1,9 +1,9 @@
 <div class="about-overlay" id="aboutOverlay">
-    <button class="overlay-back-button" id="aboutBackButton">← Back</button>
     <div class="about-overlay-content">
         <h2 class="about-overlay-title">About</h2>
         <div class="about-overlay-text">
-            <p>{{site.bio}}</p>
+            <p>{{site.bio.p1}}</p>
+            <p>{{site.bio.p2}}</p>
         </div>
     </div>
 </div>
@@ -13,27 +13,23 @@
         const aboutLink = document.getElementById('aboutLink');
         const homeContainer = document.getElementById('homeContainer');
         const aboutOverlay = document.getElementById('aboutOverlay');
-        const aboutBackButton = document.getElementById('aboutBackButton');
 
         aboutLink.addEventListener('click', function (e) {
             e.preventDefault();
 
-            // Add slide-left class to home container
-            homeContainer.classList.add('slide-left');
+            if (aboutOverlay.classList.contains('fade-in')) {
 
-            // Add fade-in class to about overlay
-            aboutOverlay.classList.add('fade-in');
+                aboutOverlay.classList.remove('fade-in');
+                setTimeout(() => {
+                    homeContainer.classList.remove('slide-left');
+                }, 200);
+            } else {
+
+                homeContainer.classList.add('slide-left');
+                aboutOverlay.classList.add('fade-in');
+            }
         });
 
-        if (aboutBackButton) {
-            aboutBackButton.addEventListener('click', function () {
-                // Remove classes to reverse animation
-                homeContainer.classList.remove('slide-left');
-                aboutOverlay.classList.remove('fade-in');
-            });
-        }
-
-        // Handle browser back button
         window.addEventListener('popstate', function () {
             homeContainer.classList.remove('slide-left');
             aboutOverlay.classList.remove('fade-in');
