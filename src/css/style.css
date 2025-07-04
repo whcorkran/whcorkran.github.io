@@ -6,10 +6,10 @@
 }
 
 :root {
-    --bg-primary: linear-gradient(135deg, #F5F5DC 0%, #DEB887 100%);
-    --bg-secondary: #F0E68C;
-    --text-primary: #8B4513;
-    --text-secondary: #000000;
+    --bg-primary: linear-gradient(135deg, #fafafa 0%, #f0f0f0 50%, #e8e8e8 100%);
+    --bg-secondary: #f0f0f0;
+    --text-primary: #8e572e;
+    --text-secondary: #2a2a2a;
     --accent: #CD853F;
     --accent-hover: #D2691E;
     --border: #D2B48C;
@@ -17,7 +17,7 @@
 }
 
 body {
-    font-family: 'Noto', serif;
+    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
     line-height: 1.6;
     color: var(--text-primary);
     background: var(--bg-primary);
@@ -30,26 +30,29 @@ body {
 .header {
     background: transparent;
     border-bottom: none;
-    position: sticky;
+    position: center;
     top: 0;
     z-index: 100;
-    padding: 2rem 0 1rem 0;
+    padding: 4rem 0 2rem 0;
 }
 
 .header-content {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 2rem;
+    text-align: center;
 }
 
-.header-row {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
+.home-header-content {
+    text-align: left;
 }
 
-.home-header-row {
-    justify-content: center;
+
+.home-header-line {
+    width: 280px;
+    height: 1px;
+    background-color: var(--text-secondary);
+    margin: 0.5rem 0 1rem 0;
 }
 
 .header-name {
@@ -75,11 +78,20 @@ body {
     width: 280px;
     height: 1px;
     background-color: var(--text-secondary);
+    margin: 0.5rem auto 1rem auto;
+}
+
+.home-header-content .header-line {
     margin: 0.5rem 0 1rem 0;
 }
 
 .nav {
     display: flex;
+    justify-content: center;
+}
+
+.home-header-content .nav {
+    justify-content: flex-start;
 }
 
 .nav-links {
@@ -195,6 +207,20 @@ a:hover {
     gap: 1rem;
     margin: 0;
     padding: 0;
+    justify-content: center;
+}
+
+.home-nav-links a {
+    color: var(--text-primary);
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+    font-family: 'Noto', serif;
+}
+
+.home-nav-links a:hover {
+    color: var(--accent-hover);
 }
 
 /* Social links */
@@ -202,7 +228,7 @@ a:hover {
     display: flex;
     justify-content: center;
     gap: 1.5rem;
-    margin-top: 0.8rem;
+    margin-top: 1rem;
 }
 
 .social-link {
@@ -221,4 +247,46 @@ a:hover {
 .social-link svg {
     width: 24px;
     height: 24px;
+}
+
+/* About page styling */
+.about-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 60vh;
+    padding: 2rem;
+}
+
+.about-content {
+    max-width: 800px;
+    width: 100%;
+    padding: 3rem;
+    text-align: center;
+}
+
+.about-title {
+    font-size: 2.5rem;
+    color: var(--text-primary);
+    margin-bottom: 2rem;
+    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+}
+
+.about-text {
+    text-align: left;
+    line-height: 1.8;
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+    text-align: justify;
+    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+}
+
+.about-text p:last-child {
+    margin-bottom: 0;
 }
