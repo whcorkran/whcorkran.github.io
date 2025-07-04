@@ -1,0 +1,33 @@
+<div class="about-overlay" id="aboutOverlay">
+    <div class="about-overlay-content">
+        <h2 class="about-overlay-title">About</h2>
+        <div class="about-overlay-text">
+            <p>{{site.bio}}</p>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const aboutLink = document.getElementById('aboutLink');
+        const homeContainer = document.getElementById('homeContainer');
+        const aboutOverlay = document.getElementById('aboutOverlay');
+
+        aboutLink.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            // Add slide-left class to home container
+            homeContainer.classList.add('slide-left');
+
+            // Add fade-in class to about overlay
+            aboutOverlay.classList.add('fade-in');
+        });
+
+
+        // Handle browser back button
+        window.addEventListener('popstate', function () {
+            homeContainer.classList.remove('slide-left');
+            aboutOverlay.classList.remove('fade-in');
+        });
+    });
+</script>
