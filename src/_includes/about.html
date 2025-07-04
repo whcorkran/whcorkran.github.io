@@ -1,4 +1,5 @@
 <div class="about-overlay" id="aboutOverlay">
+    <button class="overlay-back-button" id="aboutBackButton">← Back</button>
     <div class="about-overlay-content">
         <h2 class="about-overlay-title">About</h2>
         <div class="about-overlay-text">
@@ -12,6 +13,7 @@
         const aboutLink = document.getElementById('aboutLink');
         const homeContainer = document.getElementById('homeContainer');
         const aboutOverlay = document.getElementById('aboutOverlay');
+        const aboutBackButton = document.getElementById('aboutBackButton');
 
         aboutLink.addEventListener('click', function (e) {
             e.preventDefault();
@@ -23,6 +25,13 @@
             aboutOverlay.classList.add('fade-in');
         });
 
+        if (aboutBackButton) {
+            aboutBackButton.addEventListener('click', function () {
+                // Remove classes to reverse animation
+                homeContainer.classList.remove('slide-left');
+                aboutOverlay.classList.remove('fade-in');
+            });
+        }
 
         // Handle browser back button
         window.addEventListener('popstate', function () {
