@@ -1,0 +1,45 @@
+<div class="cv-overlay" id="cvOverlay">
+    <button class="overlay-back-button" id="cvBackButton">← Back</button>
+    <div class="cv-overlay-content">
+        <h2 class="cv-overlay-title">CV</h2>
+        <div class="cv-overlay-text">
+            <p>Coming soon - professional experience and qualifications.</p>
+            <p>This section will include my educational background, work experience, skills, and achievements in a comprehensive format.</p>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const cvLink = document.getElementById('cvLink');
+        const homeContainer = document.getElementById('homeContainer');
+        const cvOverlay = document.getElementById('cvOverlay');
+        const cvBackButton = document.getElementById('cvBackButton');
+
+        if (cvLink) {
+            cvLink.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                // Add slide-up class to home container
+                homeContainer.classList.add('slide-up');
+
+                // Add fade-in class to cv overlay
+                cvOverlay.classList.add('fade-in');
+            });
+        }
+
+        if (cvBackButton) {
+            cvBackButton.addEventListener('click', function () {
+                // Remove classes to reverse animation
+                homeContainer.classList.remove('slide-up');
+                cvOverlay.classList.remove('fade-in');
+            });
+        }
+
+        // Handle browser back button
+        window.addEventListener('popstate', function () {
+            homeContainer.classList.remove('slide-up');
+            cvOverlay.classList.remove('fade-in');
+        });
+    });
+</script>

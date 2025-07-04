@@ -183,6 +183,10 @@ a:hover {
     transform: translateX(-28%);
 }
 
+.home-header-container.slide-up {
+    transform: translateY(-100%);
+}
+
 .home-header-image {
     display: block;
     max-width: 960px;
@@ -351,4 +355,88 @@ a:hover {
 
 .about-overlay-text p:last-child {
     margin-bottom: 0;
+}
+
+/* CV and Projects overlays for home page animation */
+.cv-overlay,
+.projects-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: var(--bg-primary);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.2s, visibility 0s 1s;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.cv-overlay.fade-in,
+.projects-overlay.fade-in {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.2s, visibility 0s 0s;
+}
+
+.cv-overlay-content,
+.projects-overlay-content {
+    max-width: 1000px;
+    width: 100%;
+    text-align: center;
+}
+
+.cv-overlay-title,
+.projects-overlay-title {
+    font-size: 2.5rem;
+    color: var(--text-primary);
+    margin-bottom: 2rem;
+    font-family: 'Noto', serif;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+}
+
+.cv-overlay-text,
+.projects-overlay-text {
+    line-height: 1.8;
+    text-align: left;
+}
+
+.cv-overlay-text p,
+.projects-overlay-text p {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+}
+
+.cv-overlay-text p:last-child,
+.projects-overlay-text p:last-child {
+    margin-bottom: 0;
+}
+
+/* Back button for CV and Projects overlays */
+.overlay-back-button {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    background: none;
+    border: 2px solid var(--text-primary);
+    color: var(--text-primary);
+    padding: 0.5rem 1rem;
+    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+}
+
+.overlay-back-button:hover {
+    background: var(--text-primary);
+    color: var(--bg-primary);
 }
