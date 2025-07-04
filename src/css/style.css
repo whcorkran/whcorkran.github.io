@@ -187,6 +187,10 @@ a:hover {
     transform: translateY(-100%);
 }
 
+.home-header-container.fade-out {
+    opacity: 0;
+}
+
 .home-header-image {
     display: block;
     max-width: 960px;

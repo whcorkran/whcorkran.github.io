@@ -29,12 +29,12 @@
                     
                     // Wait for about overlay to close before opening Projects
                     setTimeout(() => {
-                        homeContainer.classList.add('slide-up');
+                        homeContainer.classList.add('fade-out');
                         projectsOverlay.classList.add('fade-in');
                     }, 800);
                 } else {
-                    // Add slide-up class to home container
-                    homeContainer.classList.add('slide-up');
+                    // Add fade-out class to home container
+                    homeContainer.classList.add('fade-out');
 
                     // Add fade-in class to projects overlay
                     projectsOverlay.classList.add('fade-in');
@@ -45,14 +45,14 @@
         if (projectsBackButton) {
             projectsBackButton.addEventListener('click', function () {
                 // Remove classes to reverse animation
-                homeContainer.classList.remove('slide-up');
+                homeContainer.classList.remove('fade-out');
                 projectsOverlay.classList.remove('fade-in');
             });
         }
 
         // Handle browser back button
         window.addEventListener('popstate', function () {
-            homeContainer.classList.remove('slide-up');
+            homeContainer.classList.remove('fade-out');
             projectsOverlay.classList.remove('fade-in');
         });
     });
