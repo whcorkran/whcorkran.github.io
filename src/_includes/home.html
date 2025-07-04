@@ -1,14 +1,14 @@
 {% include "base.html" %}
 
 <body>
-    <div class="home-header-container">
+    <div class="home-header-container" id="homeContainer">
         <img src="/images/gputhinker2.png" class="home-header-image">
         <div class="home-header-only">
             <h1 class="header-name">{{site.name}}</h1>
             <div class="home-header-line"></div>
             <nav class="home-nav-links">
                 <ul class="home-nav-links">
-                    <li><a href="/bio">About</a></li>
+                    <li><a href="#" id="aboutLink">About</a></li>
                     <li> <a> | </a> </li>
                     <li><a href="/projects">Projects</a></li>
                     <li> <a> | </a> </li>
@@ -32,4 +32,46 @@
             </div>
         </div>
     </div>
+
+    <!-- About content overlay -->
+    <div class="about-overlay" id="aboutOverlay">
+        <button class="back-button" id="backButton">← Back</button>
+        <div class="about-overlay-content">
+            <h2 class="about-overlay-title">About</h2>
+            <div class="about-overlay-text">
+                <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const aboutLink = document.getElementById('aboutLink');
+            const homeContainer = document.getElementById('homeContainer');
+            const aboutOverlay = document.getElementById('aboutOverlay');
+            const backButton = document.getElementById('backButton');
+
+            aboutLink.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // Add slide-left class to home container
+                homeContainer.classList.add('slide-left');
+                
+                // Add fade-in class to about overlay
+                aboutOverlay.classList.add('fade-in');
+            });
+
+            backButton.addEventListener('click', function() {
+                // Remove classes to reverse animation
+                homeContainer.classList.remove('slide-left');
+                aboutOverlay.classList.remove('fade-in');
+            });
+
+            // Handle browser back button
+            window.addEventListener('popstate', function() {
+                homeContainer.classList.remove('slide-left');
+                aboutOverlay.classList.remove('fade-in');
+            });
+        });
+    </script>
 </body>
