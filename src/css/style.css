@@ -172,15 +172,16 @@ a:hover {
 .projects-section,
 .cv-section {
     min-height: 80vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: block;
     padding: 3rem 2rem;
 }
 
 .home-section {
     background: var(--bg-primary);
     min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .about-section {
