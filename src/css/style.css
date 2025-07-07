@@ -52,7 +52,7 @@ body {
     width: 350px;
     height: 1px;
     background-color: var(--text-secondary);
-    margin: 0.5rem 0 0.75rem 0;
+    margin: 0.5rem auto 0.75rem auto;
 }
 
 .header-name {
@@ -167,18 +167,20 @@ a:hover {
 
 
 /* Section-based layout */
-.home-section,
-.about-section,
-.projects-section,
-.cv-section {
-    min-height: 80vh;
-    display: block;
-    padding: 3rem 2rem;
-}
-
 .home-section {
     background: var(--bg-primary);
     min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 2rem;
+}
+
+.about-section,
+.projects-section,
+.cv-section {
+    min-height: 60vh;
+    padding: 3rem 2rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -186,17 +188,14 @@ a:hover {
 
 .about-section {
     background: var(--bg-secondary);
-    min-height: 60vh;
 }
 
 .projects-section {
     background: var(--bg-primary);
-    min-height: 60vh;
 }
 
 .cv-section {
     background: var(--bg-secondary);
-    min-height: 60vh;
 }
 
 /* Home page header styling */
@@ -212,10 +211,9 @@ a:hover {
 
 .home-header-image {
     display: block;
-    margin-left: 65px;
     max-width: 800px;
     height: auto;
-    margin-bottom: 0.75rem;
+    margin: 0 auto 0.75rem auto;
     pointer-events: none;
     user-select: none;
     -webkit-user-select: none;
