@@ -189,12 +189,12 @@ a:hover {
 }
 
 .projects-section {
-    background: var(--bg-primary);
+    background: var(--bg-secondary);
     min-height: 60vh;
 }
 
 .cv-section {
-    background: var(--bg-secondary);
+    background: var(--bg-primary);
     min-height: 60vh;
 }
 
