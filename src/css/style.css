@@ -52,7 +52,7 @@ body {
     width: 280px;
     height: 1px;
     background-color: var(--text-secondary);
-    margin: 0.5rem 0 1rem 0;
+    margin: 0.5rem 0 0.75rem 0;
 }
 
 .header-name {
@@ -211,9 +211,9 @@ a:hover {
 
 .home-header-image {
     display: block;
-    max-width: 600px;
+    max-width: 800px;
     height: auto;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.75rem;
     pointer-events: none;
     user-select: none;
     -webkit-user-select: none;
@@ -236,7 +236,7 @@ a:hover {
     display: flex;
     list-style: none;
     gap: 0.5rem;
-    margin: 1rem 0;
+    margin: 0.5rem 0;
     padding: 0;
     justify-content: center;
     align-items: center;
@@ -272,7 +272,7 @@ a:hover {
     display: flex;
     justify-content: center;
     gap: 1rem;
-    margin-top: 1.5rem;
+    margin-top: 0.75rem;
 }
 
 .social-link {
@@ -333,8 +333,8 @@ a:hover {
     }
 
     .home-header-image {
-        max-width: 400px;
-        margin-bottom: 1rem;
+        max-width: 500px;
+        margin-bottom: 0.5rem;
     }
 
     .section-title {
@@ -350,7 +350,7 @@ a:hover {
     .home-nav-links {
         flex-direction: column;
         gap: 0.25rem;
-        margin: 0.75rem 0;
+        margin: 0.5rem 0;
     }
 
     .home-nav-links li:nth-child(even) {
@@ -359,7 +359,7 @@ a:hover {
 
     .social-links {
         gap: 0.75rem;
-        margin-top: 1rem;
+        margin-top: 0.5rem;
     }
 
     .home-section,
