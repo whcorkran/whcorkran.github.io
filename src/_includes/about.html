@@ -1,38 +1,10 @@
-<div class="about-overlay" id="aboutOverlay">
-    <div class="about-overlay-content">
-        <h2 class="about-overlay-title">About</h2>
-        <div class="about-overlay-text">
+<section class="about-section" id="about">
+    <div class="section-content">
+        <h2 class="section-title">About</h2>
+        <div class="section-text">
             <p>{{site.bio.p1}}</p>
             <p>{{site.bio.p2}}</p>
+            <p>{{site.bio.p3}}</p>
         </div>
     </div>
-</div>
-
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        const aboutLink = document.getElementById('aboutLink');
-        const homeContainer = document.getElementById('homeContainer');
-        const aboutOverlay = document.getElementById('aboutOverlay');
-
-        aboutLink.addEventListener('click', function (e) {
-            e.preventDefault();
-
-            if (aboutOverlay.classList.contains('fade-in')) {
-
-                aboutOverlay.classList.remove('fade-in');
-                setTimeout(() => {
-                    homeContainer.classList.remove('slide-left');
-                }, 200);
-            } else {
-
-                homeContainer.classList.add('slide-left');
-                aboutOverlay.classList.add('fade-in');
-            }
-        });
-
-        window.addEventListener('popstate', function () {
-            homeContainer.classList.remove('slide-left');
-            aboutOverlay.classList.remove('fade-in');
-        });
-    });
-</script>
+</section>
