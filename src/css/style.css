@@ -171,27 +171,31 @@ a:hover {
 .about-section,
 .projects-section,
 .cv-section {
-    min-height: 100vh;
+    min-height: 80vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 2rem;
+    padding: 3rem 2rem;
 }
 
 .home-section {
     background: var(--bg-primary);
+    min-height: 100vh;
 }
 
 .about-section {
     background: var(--bg-secondary);
+    min-height: 60vh;
 }
 
 .projects-section {
     background: var(--bg-primary);
+    min-height: 60vh;
 }
 
 .cv-section {
     background: var(--bg-secondary);
+    min-height: 60vh;
 }
 
 /* Home page header styling */
@@ -200,17 +204,18 @@ a:hover {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 2rem;
+    padding: 1rem;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .home-header-image {
     display: block;
-    max-width: 960px;
+    max-width: 400px;
     height: auto;
-    margin-bottom: 0.01rem;
+    margin-bottom: 1.5rem;
     pointer-events: none;
     user-select: none;
-    margin-left: 90px;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -219,43 +224,55 @@ a:hover {
     -khtml-user-drag: none;
     -moz-user-drag: none;
     -o-user-drag: none;
-
 }
 
 .home-header-only {
     text-align: center;
-    padding: 0.2rem 1rem 0.5rem 2rem;
+    padding: 0;
     margin-top: 0;
 }
 
 .home-nav-links {
     display: flex;
     list-style: none;
-    gap: 1rem;
-    margin: 0;
+    gap: 0.5rem;
+    margin: 1rem 0;
     padding: 0;
     justify-content: center;
+    align-items: center;
 }
 
 .home-nav-links a {
     color: var(--text-primary);
     text-decoration: none;
     font-weight: normal;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     transition: color 0.3s ease;
     font-family: 'Noto', serif;
+    padding: 0.5rem 1rem;
 }
 
 .home-nav-links a:hover {
     color: var(--accent-hover);
 }
 
+.home-nav-links li:nth-child(even) a {
+    color: var(--text-secondary);
+    opacity: 0.6;
+    padding: 0.5rem 0.25rem;
+    cursor: default;
+}
+
+.home-nav-links li:nth-child(even) a:hover {
+    color: var(--text-secondary);
+}
+
 /* Social links */
 .social-links {
     display: flex;
     justify-content: center;
-    gap: 1.5rem;
-    margin-top: 1rem;
+    gap: 1rem;
+    margin-top: 1.5rem;
 }
 
 .social-link {
@@ -264,6 +281,7 @@ a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 0.5rem;
 }
 
 .social-link:hover {
@@ -272,40 +290,91 @@ a:hover {
 }
 
 .social-link svg {
-    width: 24px;
-    height: 24px;
+    width: 20px;
+    height: 20px;
 }
 
 /* Section content styling */
 .section-content {
-    max-width: 1000px;
+    max-width: 800px;
     width: 100%;
     text-align: left;
 }
 
 .section-title {
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: var(--text-primary);
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     font-family: 'Noto', serif;
     font-weight: bold;
     letter-spacing: 0.05em;
 }
 
 .section-text {
-    line-height: 1.8;
+    line-height: 1.6;
     text-align: left;
 }
 
 .section-text p {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     color: var(--text-secondary);
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
     font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
 }
 
 .section-text p:last-child {
     margin-bottom: 0;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .home-header-container {
+        padding: 1rem;
+    }
+    
+    .home-header-image {
+        max-width: 280px;
+        margin-bottom: 1rem;
+    }
+    
+    .section-title {
+        font-size: 1.75rem;
+        margin-bottom: 1rem;
+    }
+    
+    .section-text p {
+        font-size: 0.85rem;
+        margin-bottom: 0.75rem;
+    }
+    
+    .home-nav-links {
+        flex-direction: column;
+        gap: 0.25rem;
+        margin: 0.75rem 0;
+    }
+    
+    .home-nav-links li:nth-child(even) {
+        display: none;
+    }
+    
+    .social-links {
+        gap: 0.75rem;
+        margin-top: 1rem;
+    }
+    
+    .home-section,
+    .about-section,
+    .projects-section,
+    .cv-section {
+        padding: 2rem 1rem;
+        min-height: auto;
+    }
+    
+    .about-section,
+    .projects-section,
+    .cv-section {
+        min-height: 50vh;
+    }
 }
 
 /* Smooth scrolling */
