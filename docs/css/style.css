@@ -6,10 +6,10 @@
 }
 
 :root {
-    --bg-primary: linear-gradient(135deg, #F5F5DC 0%, #DEB887 100%);
-    --bg-secondary: #F0E68C;
-    --text-primary: #8B4513;
-    --text-secondary: #000000;
+    --bg-primary: linear-gradient(135deg, #fafafa 0%, #f0f0f0 50%, #e8e8e8 100%);
+    --bg-secondary: #f0f0f0;
+    --text-primary: #8e572e;
+    --text-secondary: #2a2a2a;
     --accent: #CD853F;
     --accent-hover: #D2691E;
     --border: #D2B48C;
@@ -17,7 +17,7 @@
 }
 
 body {
-    font-family: 'Noto', serif;
+    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
     line-height: 1.6;
     color: var(--text-primary);
     background: var(--bg-primary);
@@ -30,38 +30,68 @@ body {
 .header {
     background: transparent;
     border-bottom: none;
-    position: sticky;
+    position: center;
     top: 0;
     z-index: 100;
-    padding: 2rem 0 1rem 0;
+    padding: 4rem 0 2rem 0;
 }
 
 .header-content {
     max-width: 1200px;
     margin: 0 auto;
-    text-align: center;
     padding: 0 2rem;
+    text-align: center;
+}
+
+.home-header-content {
+    text-align: center;
+}
+
+
+.home-header-line {
+    width: 350px;
+    height: 1px;
+    background-color: var(--text-secondary);
+    margin: 0.5rem auto 0.75rem auto;
 }
 
 .header-name {
     font-size: 2.4rem;
     font-weight: normal;
     color: var(--text-primary);
-    margin-bottom: 0.5rem;
+    margin-bottom: 0;
     font-family: 'Noto Bold 700', serif;
     letter-spacing: 0.1em;
 }
 
+.header-name-link {
+    color: var(--text-primary);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.header-name-link:hover {
+    color: var(--accent-hover);
+}
+
 .header-line {
-    width: 100%;
+    width: 280px;
     height: 1px;
-    background-color: var(--text-primary);
-    margin: 0 auto 1rem auto;
+    background-color: var(--text-secondary);
+    margin: 0.5rem auto 1rem auto;
+}
+
+.home-header-content .header-line {
+    margin: 0.5rem 0 1rem 0;
 }
 
 .nav {
     display: flex;
     justify-content: center;
+}
+
+.home-header-content .nav {
+    justify-content: flex-start;
 }
 
 .nav-links {
@@ -78,11 +108,11 @@ body {
     font-weight: normal;
     font-size: 1.2rem;
     transition: color 0.3s ease;
-    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Noto', serif;
 }
 
 .nav-links a:hover {
-    color: var(--text-secondary);
+    color: var(--accent-hover);
 }
 
 /* Main content */
@@ -95,7 +125,12 @@ body {
 }
 
 /* Typography */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     margin-bottom: 1rem;
     font-weight: 600;
     line-height: 1.2;
@@ -131,24 +166,58 @@ a:hover {
 }
 
 
+/* Section-based layout */
+.home-section {
+    background: var(--bg-primary);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 2rem;
+}
+
+.about-section,
+.projects-section,
+.cv-section {
+    min-height: 60vh;
+    padding: 3rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-section {
+    background: var(--bg-secondary);
+}
+
+.projects-section {
+    background: var(--bg-secondary);
+    min-height: 60vh;
+}
+
+.cv-section {
+    background: var(--bg-primary);
+    min-height: 60vh;
+}
+
 /* Home page header styling */
 .home-header-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 80vh;
-    padding: 2rem;
+    padding: 1rem;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .home-header-image {
     display: block;
-    max-width: 960px;
+    max-width: 800px;
     height: auto;
-    margin-bottom: 0.01rem;
+    margin: 0 auto 0.75rem auto;
     pointer-events: none;
     user-select: none;
-    margin-left: 90px;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -157,12 +226,127 @@ a:hover {
     -khtml-user-drag: none;
     -moz-user-drag: none;
     -o-user-drag: none;
-    user-drag: none;
-
 }
 
 .home-header-only {
     text-align: center;
-    padding: 0.2rem 1rem 0.5rem 2rem;
+    padding: 0;
     margin-top: 0;
+}
+
+.home-nav-links {
+    display: flex;
+    list-style: none;
+    gap: 0.5rem;
+    margin: 0.5rem 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-nav-links a {
+    color: var(--text-primary);
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+    font-family: 'Noto', serif;
+    padding: 0.5rem 1rem;
+}
+
+.home-nav-links a:hover {
+    color: var(--accent-hover);
+}
+
+.home-nav-links li:nth-child(even) a {
+    color: var(--text-secondary);
+    opacity: 0.6;
+    padding: 0.5rem 0.25rem;
+    cursor: default;
+}
+
+.home-nav-links li:nth-child(even) a:hover {
+    color: var(--text-secondary);
+}
+
+/* Social links */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 0.65rem;
+}
+
+.social-link {
+    color: var(--text-primary);
+    transition: color 0.3s ease, transform 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+}
+
+.social-link:hover {
+    color: var(--accent-hover);
+    transform: translateY(-2px);
+}
+
+.social-link svg {
+    width: 20px;
+    height: 20px;
+}
+
+/* Section content styling */
+.section-content {
+    max-width: 800px;
+    width: 100%;
+    text-align: left;
+}
+
+.section-title {
+    font-size: 2rem;
+    color: var(--text-primary);
+    margin-bottom: 1.5rem;
+    font-family: 'Noto', serif;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+}
+
+.section-text {
+    line-height: 1.6;
+    text-align: left;
+}
+
+.section-text p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+}
+
+.section-text p:last-child {
+    margin-bottom: 0;
+}
+
+.section-text ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    margin: 0;
+}
+
+.section-text li {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+    line-height: 1.6;
+}
+
+.section-text li:last-child {
+    margin-bottom: 0;
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
 }
