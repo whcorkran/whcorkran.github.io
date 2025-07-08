@@ -362,6 +362,10 @@ a:hover {
     font-size: 1.2rem;
 }
 
+.section-text b {
+    color: var(--text-secondary);
+}
+
 /* Smooth scrolling */
 html {
     scroll-behavior: smooth;
