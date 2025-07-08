@@ -33,7 +33,7 @@ body {
     position: center;
     top: 0;
     z-index: 100;
-    padding: 4rem 0 2rem 0;
+    padding: 2rem 0;
 }
 
 .header-content {
@@ -169,7 +169,7 @@ a:hover {
 /* Section-based layout */
 .home-section {
     background: var(--bg-primary);
-    min-height: 100vh;
+    min-height: 90vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -179,8 +179,7 @@ a:hover {
 .about-section,
 .projects-section,
 .cv-section {
-    min-height: 60vh;
-    padding: 3rem 2rem;
+    padding: 4rem 2rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -192,12 +191,10 @@ a:hover {
 
 .projects-section {
     background: var(--bg-secondary);
-    min-height: 60vh;
 }
 
 .cv-section {
     background: var(--bg-primary);
-    min-height: 60vh;
 }
 
 /* Home page header styling */
@@ -237,7 +234,6 @@ a:hover {
 .home-nav-links {
     display: flex;
     list-style: none;
-    gap: 0.5rem;
     margin: 0.5rem 0;
     padding: 0;
     justify-content: center;
@@ -258,15 +254,11 @@ a:hover {
     color: var(--accent-hover);
 }
 
-.home-nav-links li:nth-child(even) a {
+.home-nav-links li+li::before {
+    content: "|";
     color: var(--text-secondary);
     opacity: 0.6;
-    padding: 0.5rem 0.25rem;
-    cursor: default;
-}
-
-.home-nav-links li:nth-child(even) a:hover {
-    color: var(--text-secondary);
+    padding: 0 0.75rem;
 }
 
 /* Social links */
@@ -306,7 +298,7 @@ a:hover {
 .section-title {
     font-size: 2rem;
     color: var(--text-primary);
-    margin-bottom: 1.9rem;
+    margin-bottom: 1.5rem;
     font-family: 'Noto', serif;
     font-weight: bold;
     letter-spacing: 0.05em;
@@ -331,7 +323,7 @@ a:hover {
 .section-text ul {
     list-style: none;
     padding-left: 0;
-    margin: 0.5rem 0 1.5rem 1.5rem;
+    margin: 0.5rem 0 1.25rem 1.5rem;
 }
 
 .section-text ul:last-of-type {
@@ -341,7 +333,7 @@ a:hover {
 .section-text li {
     font-size: 0.9rem;
     color: var(--text-secondary);
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.5rem;
     font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
     line-height: 1.6;
     position: relative;
