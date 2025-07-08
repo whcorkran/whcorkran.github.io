@@ -33,7 +33,7 @@ body {
     position: center;
     top: 0;
     z-index: 100;
-    padding: 2rem 0;
+    padding: 1.5rem 0;
 }
 
 .header-content {
@@ -49,14 +49,15 @@ body {
 
 
 .home-header-line {
-    width: 350px;
+    max-width: 350px;
+    width: 90%;
     height: 1px;
     background-color: var(--text-secondary);
-    margin: 0.5rem auto 0.75rem auto;
+    margin: 0.25rem auto 0.5rem auto;
 }
 
 .header-name {
-    font-size: 2.4rem;
+    font-size: 2.2rem;
     font-weight: normal;
     color: var(--text-primary);
     margin-bottom: 0;
@@ -211,6 +212,7 @@ a:hover {
 .home-header-image {
     display: block;
     max-width: 800px;
+    width: 100%;
     height: auto;
     margin: 0 auto 0.75rem auto;
     pointer-events: none;
@@ -361,4 +363,90 @@ a:hover {
 /* Smooth scrolling */
 html {
     scroll-behavior: smooth;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .header-name {
+        font-size: 2rem;
+    }
+
+    .home-nav-links a {
+        font-size: 1rem;
+        padding: 0.5rem;
+    }
+
+    .home-nav-links li+li::before {
+        padding: 0 0.5rem;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .about-section,
+    .projects-section,
+    .cv-section {
+        padding: 3rem 1rem;
+    }
+
+    .home-section {
+        padding: 2rem 1rem;
+    }
+
+    .section-text ul {
+        margin-left: 0;
+    }
+
+    .section-text li {
+        padding-left: 1.2rem;
+    }
+
+    .section-text p,
+    .section-text li {
+        font-size: 0.85rem;
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .header-name {
+        font-size: 2rem;
+    }
+
+    .home-nav-links a {
+        font-size: 1rem;
+        padding: 0.5rem;
+    }
+
+    .home-nav-links li+li::before {
+        padding: 0 0.5rem;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .about-section,
+    .projects-section,
+    .cv-section {
+        padding: 3rem 1rem;
+    }
+
+    .home-section {
+        padding: 2rem 1rem;
+    }
+
+    .section-text ul {
+        margin-left: 0;
+    }
+
+    .section-text li {
+        padding-left: 1.2rem;
+    }
+
+    .section-text p,
+    .section-text li {
+        font-size: 0.85rem;
+    }
 }
