@@ -33,13 +33,13 @@ body {
     position: center;
     top: 0;
     z-index: 100;
-    padding: 4rem 0 2rem 0;
+    padding: 1.5rem 0;
 }
 
 .header-content {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 2rem;
+    padding: 0 1rem;
     text-align: center;
 }
 
@@ -49,14 +49,15 @@ body {
 
 
 .home-header-line {
-    width: 350px;
+    max-width: 900px;
+    width: 100%;
     height: 1px;
     background-color: var(--text-secondary);
-    margin: 0.5rem auto 0.75rem auto;
+    margin: 0.25rem auto 1rem auto;
 }
 
 .header-name {
-    font-size: 2.4rem;
+    font-size: 4rem;
     font-weight: normal;
     color: var(--text-primary);
     margin-bottom: 0;
@@ -75,7 +76,8 @@ body {
 }
 
 .header-line {
-    width: 280px;
+    max-width: 280px;
+    width: 90%;
     height: 1px;
     background-color: var(--text-secondary);
     margin: 0.5rem auto 1rem auto;
@@ -169,7 +171,7 @@ a:hover {
 /* Section-based layout */
 .home-section {
     background: var(--bg-primary);
-    min-height: 100vh;
+    min-height: 90vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -179,8 +181,7 @@ a:hover {
 .about-section,
 .projects-section,
 .cv-section {
-    min-height: 60vh;
-    padding: 3rem 2rem;
+    padding: 4rem 2rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -192,12 +193,10 @@ a:hover {
 
 .projects-section {
     background: var(--bg-secondary);
-    min-height: 60vh;
 }
 
 .cv-section {
     background: var(--bg-primary);
-    min-height: 60vh;
 }
 
 /* Home page header styling */
@@ -206,14 +205,15 @@ a:hover {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 1rem;
-    max-width: 800px;
+    padding: 0.2rem;
+    max-width: 900px;
     margin: 0 auto;
 }
 
 .home-header-image {
-    display: block;
-    max-width: 800px;
+    display: flex;
+    max-width: 1200px;
+    width: 100%;
     height: auto;
     margin: 0 auto 0.75rem auto;
     pointer-events: none;
@@ -237,7 +237,6 @@ a:hover {
 .home-nav-links {
     display: flex;
     list-style: none;
-    gap: 0.5rem;
     margin: 0.5rem 0;
     padding: 0;
     justify-content: center;
@@ -248,7 +247,7 @@ a:hover {
     color: var(--text-primary);
     text-decoration: none;
     font-weight: normal;
-    font-size: 1.1rem;
+    font-size: 1.4rem;
     transition: color 0.3s ease;
     font-family: 'Noto', serif;
     padding: 0.5rem 1rem;
@@ -258,15 +257,11 @@ a:hover {
     color: var(--accent-hover);
 }
 
-.home-nav-links li:nth-child(even) a {
+.home-nav-links li+li::before {
+    content: "|";
     color: var(--text-secondary);
     opacity: 0.6;
-    padding: 0.5rem 0.25rem;
-    cursor: default;
-}
-
-.home-nav-links li:nth-child(even) a:hover {
-    color: var(--text-secondary);
+    padding: 0 0.75rem;
 }
 
 /* Social links */
@@ -292,13 +287,13 @@ a:hover {
 }
 
 .social-link svg {
-    width: 20px;
-    height: 20px;
+    width: 24px;
+    height: 24px;
 }
 
 /* Section content styling */
 .section-content {
-    max-width: 800px;
+    max-width: 1200px;
     width: 100%;
     text-align: left;
 }
@@ -328,25 +323,96 @@ a:hover {
     margin-bottom: 0;
 }
 
+.section-text li::before {
+    content: "›";
+    color: var(--accent);
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-right: 0.6rem;
+    flex-shrink: 0;
+}
+
+.section-text b {
+    color: var(--text-secondary);
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
 .section-text ul {
-    list-style-type: disc;
-    padding-left: 1.5rem;
-    margin: 0;
+    list-style: none;
+    padding-left: 0;
+    margin: 0.5rem 0 1.25rem 0;
+}
+
+.section-text ul:last-of-type {
+    margin-bottom: 0;
 }
 
 .section-text li {
     font-size: 0.9rem;
     color: var(--text-secondary);
-    margin-bottom: 1rem;
+    margin-bottom: 0.7rem;
     font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
     line-height: 1.6;
+    display: flex;
+    align-items: baseline;
+    padding-left: 1.5rem;
+    position: relative;
 }
 
 .section-text li:last-child {
     margin-bottom: 0;
 }
 
+
+.section-text b {
+    color: var(--text-secondary);
+}
+
 /* Smooth scrolling */
 html {
     scroll-behavior: smooth;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .header-name {
+        font-size: 2rem;
+    }
+
+    .home-nav-links a {
+        font-size: 1rem;
+        padding: 0.5rem;
+    }
+
+    .home-nav-links li+li::before {
+        padding: 0 0.5rem;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .about-section,
+    .projects-section,
+    .cv-section {
+        padding: 3rem 1rem;
+    }
+
+    .home-section {
+        padding: 2rem 1rem;
+    }
+
+    .section-text ul {
+        margin-left: 0;
+    }
+
+    .section-text li {
+        padding-left: 1.2rem;
+    }
+
+    .section-text p,
+    .section-text li {
+        font-size: 0.85rem;
+    }
 }
