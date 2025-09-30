@@ -357,7 +357,7 @@ a:hover {
     line-height: 1.4;
     display: flex;
     align-items: baseline;
-    padding-left: 1.5rem;
+    padding-left: 0;
     position: relative;
 }
 
@@ -409,7 +409,7 @@ html {
     }
 
     .section-text li {
-        padding-left: 1.2rem;
+        padding-left: 0;
     }
 
     .section-text p,
