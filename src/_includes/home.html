@@ -8,13 +8,6 @@
             <div class="home-header-only">
                 <h1 class="header-name">{{site.name}}</h1>
                 <div class="home-header-line"></div>
-                <nav class="home-nav-links">
-                    <ul class="home-nav-links">
-                        <li><a href="#about" id="aboutLink">About</a></li>
-                        <li><a href="#cv" id="cvLink">Experience</a></li>
-                        <li><a href="#projects" id="projectsLink">Projects</a></li>
-                    </ul>
-                </nav>
                 <div class="social-links">
                     <a href="https://github.com/whcorkran" target="_blank" rel="noopener noreferrer"
                         class="social-link">
@@ -44,23 +37,4 @@
     <!-- Projects Section -->
     {% include "projects.html" %}
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const navLinks = document.querySelectorAll('a[href^="#"]');
-
-            navLinks.forEach(link => {
-                link.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    const targetId = this.getAttribute('href');
-                    const targetSection = document.querySelector(targetId);
-                    if (targetSection) {
-                        targetSection.scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'start'
-                        });
-                    }
-                });
-            });
-        });
-    </script>
 </body>
