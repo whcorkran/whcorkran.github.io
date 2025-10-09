@@ -2,22 +2,20 @@
   <div class="section-content">
     <h2 class="section-title">Projects</h2>
     <div class="section-text">
-      <ul> <b> DeepOthello - AlphaGo for Othello </b>
-        <li> AI board game opponent powered by neural net architecture inspired by DeepMind's AlphaGo and AlphaZero.
-        </li>
-        <li> Trained in PyTorch, game logic and interface written in Java. </li>
+      <ul> <b> {{site.projects.deepothello.title}} </b>
+        {% for item in site.projects.deepothello.items %}
+        <li> {{item}} </li>
+        {% endfor %}
       </ul>
-      <ul> <b> Protein Forge </b>
-        <li> A novel softmax-based pseudo-alignment model for predicting how multiple 3D protein structures
-          chain </li>
-        <li> Incorporates feature engineering into existing protein foundation models to reduce time on MSTA search
-          tasks by several orders of magnitude versus classical
-          techinques </li>
-        <li> Interpolated functional JAX training scripts to more performant PyTorch variants</li>
+      <ul> <b> {{site.projects.proteinforge.title}} </b>
+        {% for item in site.projects.proteinforge.items %}
+        <li> {{item}} </li>
+        {% endfor %}
       </ul>
-      <ul> <b> European Defense NLP Research Database </b>
-        <li> Web crawling pipeline built for a Penn professor's research to extract and organize reports on the
-          Russo-Ukrainian war from top European defense think tanks.  Utilized MongoDB, python, and LLM tooling in the pipeline. </li>
+      <ul> <b> {{site.projects.defense.title}} </b>
+        {% for item in site.projects.defense.items %}
+        <li> {{item}} </li>
+        {% endfor %}
       </ul>
     </div>
   </div>

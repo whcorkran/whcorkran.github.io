@@ -2,17 +2,22 @@
     <div class="section-content">
         <h2 class="section-title">Professional Experience</h2>
         <div class="section-text">
-            <ul><b>SMBC Capital Markets - Trading Analyst</b>
-                <li>Began as a junior trader at one of the world's largest banks and found a passion for software development and data science.</li>
-                <li>Built dozens of tools and automations with Python, C++ and SQL to integrate the firm's databases and valuation systems and speed up the pricing, execution, and booking of trades.</li>
+            <ul><b>{{site.cv.smbc.title}}</b>
+                {% for item in site.cv.smbc.items %}
+                <li>{{item}}</li>
+                {% endfor %}
             </ul>
 
-            <ul><b>Rosenblatt Securities - Equity Research Intern</b>
-                <li>Conducted research for a combined universe of 40+ stocks in semiconductor, fintech, and digital asset sectors.</li>
+            <ul><b>{{site.cv.rosenblatt.title}}</b>
+                {% for item in site.cv.rosenblatt.items %}
+                <li>{{item}}</li>
+                {% endfor %}
             </ul>
 
-            <ul><b>Group One Trading - Options Trading Intern</b>
-                <li>Trained in trading and options theory at a leading market-makers in exchange-listed derivatives.</li>
+            <ul><b>{{site.cv.groupone.title}}</b>
+                {% for item in site.cv.groupone.items %}
+                <li>{{item}}</li>
+                {% endfor %}
             </ul>
         </div>
     </div>
