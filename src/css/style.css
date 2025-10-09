@@ -272,13 +272,21 @@ a:hover {
     min-width: max-content;
 }
 
+/* Social section */
+.social-section {
+    background: var(--bg-primary);
+    padding: 2rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 /* Social links */
 .social-links {
     display: flex;
     gap: 0.5rem;
     align-items: center;
     justify-content: center;
-    margin: 0.1rem 0;
 }
 
 .social-link {
@@ -396,6 +404,10 @@ html {
     .social-link svg {
         width: 20px;
         height: 20px;
+    }
+
+    .social-section {
+        padding: 1.5rem 1rem;
     }
 
     .social-links {
