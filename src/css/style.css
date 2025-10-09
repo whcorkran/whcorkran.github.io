@@ -350,6 +350,7 @@ a:hover {
     color: var(--text-secondary);
     display: block;
     margin-bottom: 0.3rem;
+    margin-top: 0.75rem;
 }
 
 .section-text ul {
@@ -357,6 +358,14 @@ a:hover {
     padding-left: 0;
     margin: 0.25rem 0 0.5rem 0;
     margin-bottom: 0.3rem;
+}
+
+.section-text ul:first-child {
+    margin-top: 0;
+}
+
+.section-text ul:first-child b {
+    margin-top: 0.75rem;
 }
 
 .section-text ul:last-of-type {
