@@ -316,7 +316,7 @@ a:hover {
 .section-title {
     font-size: 1.75rem;
     color: var(--text-primary);
-    margin-bottom: 0;
+    margin-bottom: 0.5;
     font-weight: 600;
     letter-spacing: 0.02em;
 }
@@ -356,6 +356,7 @@ a:hover {
     list-style: none;
     padding-left: 0;
     margin: 0.25rem 0 0.5rem 0;
+    margin-bottom: 0.3rem;
 }
 
 .section-text ul:last-of-type {
@@ -373,8 +374,8 @@ a:hover {
     position: relative;
 }
 
-.section-text li:last-child {
-    margin-bottom: 0;
+.section-text li:first-child {
+    margin-bottom: 0.8;
 }
 
 
