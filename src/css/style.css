@@ -212,8 +212,8 @@ a:hover {
 
 .home-header-image {
     display: flex;
-    max-width: 1200px;
-    width: 100%;
+    max-width: 600px;
+    width: 50%;
     height: auto;
     margin: 0 auto 0.4rem auto;
     pointer-events: none;
