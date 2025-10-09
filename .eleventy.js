@@ -1,4 +1,4 @@
-export default async function (eleventyConfig) {
+export default async function(eleventyConfig) {
 
     eleventyConfig.addPassthroughCopy("src/images");
     eleventyConfig.addPassthroughCopy("src/css");
@@ -6,7 +6,7 @@ export default async function (eleventyConfig) {
     return {
         dir: {
             input: "src",
-            output: "../whcorkran.github.io/docs"
+            output: "docs"
         },
         templateFormats: ['md', 'njk', 'html'],
         markdownTemplateEngine: 'njk',
