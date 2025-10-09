@@ -4,3 +4,4 @@ node_modules
 *.DS_Store
 resume.js
 CNAME
+.eleventy.js
